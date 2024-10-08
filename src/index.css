@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body,
+html {
+  font-family: 'Ubuntu', sans-serif, 'Lucida Sans', Arial, sans-serif;
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #393939;
+}
+
+#sobre,
+#planos,
+#cobertura {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+}
+#logoImg {
+  width: 50px;
+  height: auto;
+}

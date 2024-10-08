@@ -1,0 +1,134 @@
+body {
+  background-image: linear-gradient(
+    to bottom top,
+    #f2f2f2,
+    #e9e9e9,
+    #e0e0e0,
+    #d8d8d8,
+    #cfcfcf
+  );
+  margin-top: 0;
+}
+.main {
+  position: relative; /* ou 'absolute' se quiser que se mova em relação ao primeiro elemento pai */
+  top: -40px; /* Ajuste este valor conforme necessário */
+  z-index: 1; /* Garante que a div fique acima de outros elementos */
+  padding: 0;
+}
+
+.section {
+  padding-top: 0;
+  margin-top: 0;
+  padding: 4rem 2rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.banner {
+  height: 600px; /* Ajuste a altura conforme necessário */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  color: white; /* Texto em branco para contraste */
+  position: relative;
+  padding: 0;
+  z-index: 1;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 58px;
+}
+.banner h2 {
+  padding-bottom: 30px;
+}
+
+h2 {
+  color: #163b6d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  color: #393939;
+  font-size: 1.1rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #289db9; /* Cor principal */
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Efeito de sombra no texto */
+}
+
+#about {
+  background: linear-gradient(135deg, #163b6d, #289db9);
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Faz a seção ocupar uma boa parte da tela */
+  border-radius: 20px; /* Arredonda a borda da seção */
+}
+
+#about h2:first-of-type {
+  margin-bottom: 1rem;
+}
+
+#plans {
+  background-color: #1e1e1e; /* Cor secundária */
+}
+
+#coverage {
+  background-color: #121212;
+  padding: 4rem 2rem;
+  color: #e0e0e0;
+}
+
+/* Slogan */
+#about h2 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+h2 span {
+  color: #289db9;
+}
+
+/* Animação para a entrada suave */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilização responsiva para telas menores */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+  .main {
+    top: -10px; /* Ajuste este valor conforme necessário */
+    z-index: 1; /* Garante que a div fique acima de outros elementos */
+  }
+}

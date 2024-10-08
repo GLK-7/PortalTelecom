@@ -1,0 +1,86 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    to left,
+    #163b6d,
+    /* Cor primária */ #121212 /* Cor da navbar */
+  );
+  z-index: 10; /* Para que a navbar fique acima do SVG */
+  margin-bottom: -1px; /* Para remover qualquer espaçamento */
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo img {
+  width: 70px;
+  height: fit-content;
+  margin-right: 30px;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+}
+
+.navMenu li {
+  margin-left: 2rem;
+}
+
+.navMenu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navMenu a:hover {
+  color: #289db9;
+}
+
+.navItem {
+  margin: 0 1.5rem;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.wave {
+  margin: -10;
+  padding: -100;
+  display: block;
+  width: 100%;
+  height: auto; /* Altura do efeito ondulado, ajuste conforme necessário */
+  position: relative;
+  top: -1px; /* Para sobrepor ligeiramente na navbar */
+  z-index: 5; /* Fica atrás da navbar */
+}
+
+@media (max-width: 768px) {
+  .navMenu {
+    flex-direction: column;
+    background-color: #163b6d;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .navMenu li {
+    margin: 1rem 0;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  /* Adicione um menu hamburguer aqui para mobile, se necessário */
+}

@@ -8,6 +8,7 @@ import {
   Wrench,
   AppWindow,
   WhatsappLogo,
+  
 } from '@phosphor-icons/react';
 
 interface Plan {
@@ -72,7 +73,16 @@ const iconMap: { [key: string]: JSX.Element } = {
 const PlansCard: React.FC = () => {
   return (
     <div className={styles.cardContainer}>
+      
       {plans.map((plan, index) => (
+        <div>
+          <div className={styles.stars}>{plan.recommended && 
+        
+          Array.from({ length: 5 }).map((_, index) => (
+                          <Star  key={index} weight='fill' size={50}/>
+                        ))}
+        </div>
+
         <div className={styles.card} key={index}>
           <div className={styles.planTitle}>
             <h3 className={styles.planName}>{plan.name}</h3>
@@ -80,10 +90,14 @@ const PlansCard: React.FC = () => {
           <div className={styles.cardBody}>
             <p className={styles.planSpeed}>{plan.speed}</p>
             <p className={styles.planPrice}>{plan.price}</p>
-            <button className={styles.subscribeButton}>
+            <a className={styles.subscribeButton}
+            href={`https://wa.me/5562996967129?text=Gostaria%20de%20contratar%20o%20plano%20de%20internet%20${plan.name}`}
+            target="_blank"  
+            rel="noopener noreferrer"
+            >
               <WhatsappLogo size={24} weight="fill" />
               Assine agora
-            </button>
+            </a>
             <br />
             <span>Benefícios</span>
             <ul className={styles.benefitsList}>
@@ -101,6 +115,8 @@ const PlansCard: React.FC = () => {
             )}
           </div>
         </div>
+        </div>
+      
       ))}
     </div>
   );

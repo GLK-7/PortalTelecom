@@ -1,25 +1,22 @@
 import styles from './Home.module.css';
 import PlansCard from '../layout/PlansCard';
-import banner from '../../assets/banner3.jpg';
+import logo from '../../assets/logo.png';
+import Contacts from '../../components/layout/Contacts';
+
 
 const Home = () => {
   return (
     <div className={styles.main}>
-      <section id="about" className={styles.section}>
-        <div className={styles.banner}>
-          <h2>
-            Internet para Nova Crixás com Rapidez, Qualidade &{' '}
-            <span>Confiança.</span>
-          </h2>
-          <img src={banner} alt="banner" />
-          <div className={styles.fade}></div>
+      <div className={styles.logo}>
+          <img src={logo} alt="logo" />
+          <h2>RAPIDEZ, QUALIDADE & <span> CONFIANÇA</span></h2>
         </div>
-      </section>
       <section id="plans" className={styles.section}>
-        <h2>Nossos planos</h2>
+        <h2>Conheça nossos planos</h2>
         <PlansCard />
       </section>
-      <section id="coverage" className={styles.section}></section>
+      <h3>Fale com a gente</h3>
+        <Contacts/>
     </div>
   );
 };

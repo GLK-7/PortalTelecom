@@ -17,7 +17,7 @@ const Contacts = () => {
             <WhatsappLogo weight='fill' size={32}/>
             <span>(62) 99696-7129</span>
         </a>
-        <a href="https://instagram.com/@portaltelecomoficial" className={styles.social_contact}>
+        <a href="https://instagram.com/portaltelecomoficial" className={styles.social_contact}>
             <InstagramLogo weight="fill" size={32} />
             @portaltelecomoficial
         </a>

@@ -91,7 +91,7 @@ const PlansCard: React.FC = () => {
             <p className={styles.planSpeed}>{plan.speed}</p>
             <p className={styles.planPrice}>{plan.price}</p>
             <a className={styles.subscribeButton}
-            href={`https://wa.me/5562996967129?text=Gostaria%20de%20contratar%20o%20plano%20de%20internet%20${plan.name}`}
+            href={`https://wa.me/5562996967129?text=Gostaria%20de%20contratar%20o%20${plan.name}!`}
             target="_blank"  
             rel="noopener noreferrer"
             >
